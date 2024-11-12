@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIKTOR RGB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="rgb-text">VIKTOR <3</div>
+    <script>
+        function changeColor() {
+            const element = document.querySelector('.rgb-text');
+            let hue = 0;
+            setInterval(() => {
+                element.style.color = `hsl(${hue}, 100%, 50%)`;
+                hue = (hue + 1) % 360; // Change the color hue
+            }, 10); // Speed of the color change
+        }
+        changeColor();
+    </script>
+</body>
+</html>
